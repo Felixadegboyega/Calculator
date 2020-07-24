@@ -189,7 +189,7 @@ Date:   Fri Jul 24 13:03:13 2020 +0100
 
 Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
 $
-//////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 diff --git a/contact.html b/contact.html
 new file mode 100644
 index 0000000..e69de29
@@ -491,5 +491,225 @@ error: the following file has changes staged in the index:
 
 Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
 $ git rm newfile.js --cached
+/////////////////////////////////////////////////////////////////////////////////////
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add Gitclass.txt
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git commit -m "I add another note"
+\[master 7fb4a1b] I add another note
+ 2 files changed, 495 insertions(+)
+ create mode 100644 Gitclass.txt
+ create mode 100644 index.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git commit -m "I add another note"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git branch myfirstbranch
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git checkout myfirstbranch
+Switched to branch 'myfirstbranch'
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
+$ git branch branchone
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (myfirstbranch)
+$ git checkout branchone
+Switched to branch 'branchone'
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (branchone)
+$ touch index.css
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (branchone)
+$ touch anyfile.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (branchone)
+$ git add .
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (branchone)
+$ git commit -m "all files added, including: index.css and anyfile.js"
+[branchone 8014233] all files added, including: index.css and anyfile.js
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 anyfile.js
+ create mode 100644 index.css
+ create mode 100644 newfile.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (branchone)
+$ git checkout master
+Switched to branch 'master'
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git checkout  branchone
+Switched to branch 'branchone'
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (branchone)
+$ git checkout master
+Switched to branch 'master'
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git merge branchone
+Updating 7fb4a1b..8014233
+Fast-forward
+ anyfile.js | 0
+ index.css  | 0
+ newfile.js | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 anyfile.js
+ create mode 100644 index.css
+ create mode 100644 newfile.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log
+commit 8014233a3f82505d3082705a15227aec75a7206d (HEAD -> master, branchone)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:42:29 2020 +0100
+
+    all files added, including: index.css and anyfile.js
+
+commit 7fb4a1bf52c87d6b28718bb2c297069f886b3833 (myfirstbranch)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:34:18 2020 +0100
+
+    I add another note
+
+commit 928119aad5db023a915027c6380cb758d35dce20
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:03:13 2020 +0100
+
+    I added all HTML files
+
+commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:00:20 2020 +0100
+
+     i created a new contact and index page
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log -pretty=oneline
+fatal: unrecognized argument: -pretty=oneline
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log --pretty=oneline
+8014233a3f82505d3082705a15227aec75a7206d (HEAD -> master, branchone) all files added, including: index.css and anyfile.js
+7fb4a1bf52c87d6b28718bb2c297069f886b3833 (myfirstbranch) I add another note
+928119aad5db023a915027c6380cb758d35dce20 I added Good Evening to the index.html Page
+c9f640333171727ee8389de425d15b2151ee6cb3 I added all HTML files
+825f8b037b5d67bbbf834a44a6781a41ea89c637  i created a new contact and index page
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log --pretty=full
+commit 8014233a3f82505d3082705a15227aec75a7206d (HEAD -> master, branchone)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Commit: felixgit <felixadegboyega2019@gmail.com>
+
+    all files added, including: index.css and anyfile.js
+
+commit 7fb4a1bf52c87d6b28718bb2c297069f886b3833 (myfirstbranch)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Commit: felixgit <felixadegboyega2019@gmail.com>
+
+    I add another note
+
+commit 928119aad5db023a915027c6380cb758d35dce20
+Author: felixgit <felixadegboyega2019@gmail.com>
+Commit: felixgit <felixadegboyega2019@gmail.com>
+
+    I added Good Evening to the index.html Page
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author: felixgit <felixadegboyega2019@gmail.com>
+Commit: felixgit <felixadegboyega2019@gmail.com>
+
+    I added all HTML files
+
+commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
+Author: felixgit <felixadegboyega2019@gmail.com>
+Commit: felixgit <felixadegboyega2019@gmail.com>
+
+     i created a new contact and index page
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log --pretty=fuller
+commit 8014233a3f82505d3082705a15227aec75a7206d (HEAD -> master, branchone)
+Author:     felixgit <felixadegboyega2019@gmail.com>
+AuthorDate: Fri Jul 24 13:42:29 2020 +0100
+Commit:     felixgit <felixadegboyega2019@gmail.com>
+CommitDate: Fri Jul 24 13:42:29 2020 +0100
+
+    all files added, including: index.css and anyfile.js
+
+commit 7fb4a1bf52c87d6b28718bb2c297069f886b3833 (myfirstbranch)
+Author:     felixgit <felixadegboyega2019@gmail.com>
+AuthorDate: Fri Jul 24 13:34:18 2020 +0100
+Commit:     felixgit <felixadegboyega2019@gmail.com>
+CommitDate: Fri Jul 24 13:34:18 2020 +0100
+
+    I add another note
+
+commit 928119aad5db023a915027c6380cb758d35dce20
+Author:     felixgit <felixadegboyega2019@gmail.com>
+AuthorDate: Fri Jul 24 13:09:23 2020 +0100
+Commit:     felixgit <felixadegboyega2019@gmail.com>
+CommitDate: Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author:     felixgit <felixadegboyega2019@gmail.com>
+AuthorDate: Fri Jul 24 13:03:13 2020 +0100
+Commit:     felixgit <felixadegboyega2019@gmail.com>
+CommitDate: Fri Jul 24 13:03:13 2020 +0100
+
+    I added all HTML files
+
+commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
+Author:     felixgit <felixadegboyega2019@gmail.com>
+AuthorDate: Fri Jul 24 13:00:20 2020 +0100
+Commit:     felixgit <felixadegboyega2019@gmail.com>
+CommitDate: Fri Jul 24 13:00:20 2020 +0100
+
+     i created a new contact and index page
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git branch
+  branchone
+* master
+  myfirstbranch
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$
 
 
