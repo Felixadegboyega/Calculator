@@ -1,0 +1,495 @@
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
+$ touch index.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
+$ git config --global user.name "felixgit"
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
+$ git config --global user.email "felixadegboyega2019@gmail.com"
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
+$ git init
+Initialized empty Git repository in C:/Users/Adegboyega Felix O/Desktop/GIT CLASS/.git/
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ touch index.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ touch contact.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add contact.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add index.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git commit -m " i created a new contact and index page"
+[master (root-commit) 825f8b0]  i created a new contact and index page
+ 2 files changed, 11 insertions(+)
+ create mode 100644 contact.html
+ create mode 100644 index.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ touch details.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add *.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git commit -m "I added all HTML files"
+[master c9f6403] I added all HTML files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 details.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add index.html
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git commit -m "I added Good Evening to the index.html Page"
+[master 928119a] I added Good Evening to the index.html Page
+ 1 file changed, 1 insertion(+)
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log
+commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:03:13 2020 +0100
+
+    I added all HTML files
+
+commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:00:20 2020 +0100
+
+     i created a new contact and index page
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git lop -p
+git: 'lop' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log -p
+commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+
+diff --git a/index.html b/index.html
+index 3a4f46a..c3a4ff9 100644
+--- a/index.html
++++ b/index.html
+@@ -7,5 +7,6 @@
+ </head>
+ <body>
+     This is HTML page.
++    Good Evening
+ </body>
+ </html>
+\ No newline at end of file
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:03:13 2020 +0100
+
+    I added all HTML files
+
+diff --git a/details.html b/details.html
+new file mode 100644
+index 0000000..e69de29
+
+commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:00:20 2020 +0100
+
+     i created a new contact and index page
+
+diff --git a/contact.html b/contact.html
+new file mode 100644
+index 0000000..e69de29
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..3a4f46a
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>GIT</title>
++</head>
++<body>
++    This is HTML page.
++</body>
++</html>
+\ No newline at end of file
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log -2
+commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:03:13 2020 +0100
+
+    I added all HTML files
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$
+//////////////////////////////////////////////
+diff --git a/contact.html b/contact.html
+new file mode 100644
+index 0000000..e69de29
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..3a4f46a
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>GIT</title>
++</head>
++<body>
++    This is HTML page.
++</body>
++</html>
+\ No newline at end of file
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git log -2
+commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:09:23 2020 +0100
+
+    I added Good Evening to the index.html Page
+
+commit c9f640333171727ee8389de425d15b2151ee6cb3
+Author: felixgit <felixadegboyega2019@gmail.com>
+Date:   Fri Jul 24 13:03:13 2020 +0100
+
+    I added all HTML files
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add .
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git diff
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ touch newfile.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git diff
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git diff --staged
+diff --git a/Gitclass.txt b/Gitclass.txt
+new file mode 100644
+index 0000000..66cfdd3
+--- /dev/null
++++ b/Gitclass.txt
+@@ -0,0 +1,191 @@
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ touch index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ git config --global user.name "felixgit"
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ git config --global user.email "felixadegboyega2019@gmail.com"
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ git init
++Initialized empty Git repository in C:/Users/Adegboyega Felix O/Desktop/GIT CLASS/.git/
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ touch index.js
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ touch contact.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git add contact.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git add index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git commit -m " i created a new contact and index page"
++[master (root-commit) 825f8b0]  i created a new contact and index page
++ 2 files changed, 11 insertions(+)
++ create mode 100644 contact.html
++ create mode 100644 index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ touch details.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ touch index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ git config --global user.name "felixgit"
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ git config --global user.email "felixadegboyega2019@gmail.com"
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS
++$ git init
++Initialized empty Git repository in C:/Users/Adegboyega Felix O/Desktop/GIT CLASS/.git/
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ touch index.js
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ touch contact.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git add contact.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git add index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git commit -m " i created a new contact and index page"
++[master (root-commit) 825f8b0]  i created a new contact and index page
++ 2 files changed, 11 insertions(+)
++ create mode 100644 contact.html
++ create mode 100644 index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ touch details.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git add *.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git commit -m "I added all HTML files"
++[master c9f6403] I added all HTML files
++ 1 file changed, 0 insertions(+), 0 deletions(-)
++ create mode 100644 details.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git status
++On branch master
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        index.js
++
++nothing added to commit but untracked files present (use "git add" to track)
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git status
++On branch master
++Changes not staged for commit:
++  (use "git add <file>..." to update what will be committed)
++  (use "git restore <file>..." to discard changes in working directory)
++        modified:   index.html
++
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        index.js
++
++no changes added to commit (use "git add" and/or "git commit -a")
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git add index.html
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git commit -m "I added Good Evening to the index.html Page"
++[master 928119a] I added Good Evening to the index.html Page
++ 1 file changed, 1 insertion(+)
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git status
++On branch master
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        index.js
++
++nothing added to commit but untracked files present (use "git add" to track)
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git log
++commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:09:23 2020 +0100
++
++    I added Good Evening to the index.html Page
++
++commit c9f640333171727ee8389de425d15b2151ee6cb3
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:03:13 2020 +0100
++
++    I added all HTML files
++
++commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:00:20 2020 +0100
++
++     i created a new contact and index page
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git lop -p
++git: 'lop' is not a git command. See 'git --help'.
++
++The most similar command is
++        log
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git log -p
++commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:09:23 2020 +0100
++
++    I added Good Evening to the index.html Page
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:09:23 2020 +0100
++
++    I added Good Evening to the index.html Page
++
++diff --git a/index.html b/index.html
++index 3a4f46a..c3a4ff9 100644
++--- a/index.html
+++++ b/index.html
++@@ -7,5 +7,6 @@
++ </head>
++ <body>
++     This is HTML page.
+++    Good Evening
++ </body>
++ </html>
++\ No newline at end of file
++
++commit c9f640333171727ee8389de425d15b2151ee6cb3
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:03:13 2020 +0100
++
++    I added all HTML files
++
++diff --git a/details.html b/details.html
++new file mode 100644
++index 0000000..e69de29
++
++commit 825f8b037b5d67bbbf834a44a6781a41ea89c637
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:00:20 2020 +0100
++
++     i created a new contact and index page
++
++diff --git a/contact.html b/contact.html
++new file mode 100644
++index 0000000..e69de29
++diff --git a/index.html b/index.html
++new file mode 100644
++index 0000000..3a4f46a
++--- /dev/null
+++++ b/index.html
++@@ -0,0 +1,11 @@
+++<!DOCTYPE html>
+++<html lang="en">
+++<head>
+++    <meta charset="UTF-8">
+++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+++    <title>GIT</title>
+++</head>
+++<body>
+++    This is HTML page.
+++</body>
+++</html>
++\ No newline at end of file
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$ git log -2
++commit 928119aad5db023a915027c6380cb758d35dce20 (HEAD -> master)
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:09:23 2020 +0100
++
++    I added Good Evening to the index.html Page
++
++commit c9f640333171727ee8389de425d15b2151ee6cb3
++Author: felixgit <felixadegboyega2019@gmail.com>
++Date:   Fri Jul 24 13:03:13 2020 +0100
++
++    I added all HTML files
++
++Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
++$
+diff --git a/index.js b/index.js
+new file mode 100644
+index 0000000..e69de29
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git add .
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ touch index.js
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git rm index.js
+error: the following file has changes staged in the index:
+    index.js
+(use --cached to keep the file, or -f to force removal)
+
+Adegboyega Felix O@DESKTOP-815MQ12 MINGW64 ~/Desktop/GIT CLASS (master)
+$ git rm newfile.js --cached
+
+
